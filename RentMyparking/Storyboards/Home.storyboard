@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="a8C-IP-Qid">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Controller-->
+        <scene sceneID="g2c-3y-ZxH">
+            <objects>
+                <viewController id="ZvC-pb-hhA" customClass="HomeController" customModule="RentMyparking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d0y-Fb-ZcF"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vd0-1N-wxQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NIf-rH-i2W">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7II-Qa-EGa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZvC-pb-hhA" id="Mak-h7-McN"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7II-Qa-EGa" secondAttribute="trailing" id="M7p-ef-SaD"/>
+                            <constraint firstItem="Vd0-1N-wxQ" firstAttribute="top" secondItem="7II-Qa-EGa" secondAttribute="bottom" id="MIS-t2-t6E"/>
+                            <constraint firstItem="7II-Qa-EGa" firstAttribute="leading" secondItem="NIf-rH-i2W" secondAttribute="leading" id="RYw-mN-Cmo"/>
+                            <constraint firstItem="7II-Qa-EGa" firstAttribute="top" secondItem="d0y-Fb-ZcF" secondAttribute="bottom" id="cwe-cG-Uxu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kbk-tV-PQC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="Kek-Gy-qyw">
+                            <connections>
+                                <action selector="searchButton:" destination="ZvC-pb-hhA" id="oij-Jq-DIL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="7II-Qa-EGa" id="NOw-lY-ooc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uQy-92-1ur" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="-543.77811094452773"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3WL-yX-p6M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a8C-IP-Qid" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L3E-ob-D9N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZvC-pb-hhA" kind="relationship" relationship="rootViewController" id="QEz-HT-zW2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2W-vX-hGT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="300" y="-543.77811094452773"/>
+        </scene>
+    </scenes>
+</document>

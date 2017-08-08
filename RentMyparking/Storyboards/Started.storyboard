@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="I62-pC-0VH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Started View Controller-->
+        <scene sceneID="EPP-yJ-W7a">
+            <objects>
+                <viewController id="I62-pC-0VH" customClass="StartedViewController" customModule="RentMyparking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z3U-NR-uac"/>
+                        <viewControllerLayoutGuide type="bottom" id="c6o-fT-fIX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="trv-cN-kVy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxI-PJ-ZkS">
+                                <rect key="frame" x="15" y="592" width="345" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="rn4-wr-pof"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getStartedButtonTapped:" destination="I62-pC-0VH" eventType="touchUpInside" id="oh0-Ag-WzJ"/>
+                                    <segue destination="SLa-Y5-VIv" kind="show" id="RxX-aE-KN2"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="A6J-GD-j9e">
+                                <rect key="frame" x="75.5" y="305.5" width="224" height="56.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ParkingFinder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdG-WK-ZWW">
+                                        <rect key="frame" x="0.0" y="0.0" width="224" height="56.5"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="36"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.54117647058823526" green="0.16862745098039217" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qxI-PJ-ZkS" secondAttribute="trailing" constant="15" id="A9g-46-d7X"/>
+                            <constraint firstItem="qxI-PJ-ZkS" firstAttribute="leading" secondItem="trv-cN-kVy" secondAttribute="leading" constant="15" id="F4N-EL-kAa"/>
+                            <constraint firstItem="qxI-PJ-ZkS" firstAttribute="top" secondItem="A6J-GD-j9e" secondAttribute="bottom" constant="230" id="Jv7-TL-yMS"/>
+                            <constraint firstItem="c6o-fT-fIX" firstAttribute="top" secondItem="qxI-PJ-ZkS" secondAttribute="bottom" constant="15" id="MSp-KV-OSN"/>
+                            <constraint firstItem="A6J-GD-j9e" firstAttribute="centerY" secondItem="trv-cN-kVy" secondAttribute="centerY" id="P6f-wv-Rj4"/>
+                            <constraint firstItem="A6J-GD-j9e" firstAttribute="centerX" secondItem="trv-cN-kVy" secondAttribute="centerX" id="j9O-P4-134"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l7C-f0-Kgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="135"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="kES-G0-TUo">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FZb-sV-XgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="SLa-Y5-VIv" customClass="LoginController" customModule="RentMyparking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="itH-se-auK"/>
+                        <viewControllerLayoutGuide type="bottom" id="PzX-2p-xlV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G82-JS-48z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3y-mr-tlV">
+                                <rect key="frame" x="199" y="434" width="38" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="SLa-Y5-VIv" eventType="touchUpInside" id="HhZ-KX-tSk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1520.8" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
